@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<!-- Смени заглавието на страницата -->		
+		<title>МО СВ</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<style>
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+
+html,
+body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.row {
+  margin-left:0px;
+  margin-right:0px;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+}
+
+#footer {
+  height: 60px;
+  background-color: #17167c;
+  margin-top:50px;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+/* Стилове за карусела и менюто */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.carousel-caption {
+  z-index: 10;
+}
+
+#myCarousel  .item {
+  height: 400px;
+  background-color:#aaa;
+}
+
+#myCarousel img {
+/* ако искаме слайдовете да заемат цял екран
+  position: absolute;
+  top: 0;
+  left: 0; 
+  min-width: 100%;
+*/  
+  height: 400px;
+  margin: 0 auto;
+}
+
+#myCarousel {
+    text-align: center;
+	margin: 0 auto;
+}
+
+#wrap > .container {
+  padding: 60px 15px 0;
+}
+.container .credit {
+  margin: 20px 0;
+}
+
+#footer {
+  background-color:#414141;
+}
+
+#footer a {
+  color:#efefef;
+}
+
+header {
+  background: #333;
+  color:#555;
+}
+
+header .dropdown-menu {
+  top:74px;
+  background: #ffcc33;
+  border-width:0;
+}
+
+h1 {
+  font-size:50px;
+}
+
+.logo {
+  font-size: 60px;
+  position: absolute;
+  z-index: 1200;
+  color: #3331c4;
+  top: 70px;
+  text-align: center;
+  width: 100%;
+  text-shadow: 1px 0px 0px #686868, 
+               1px 1px 0px #686868, 
+  		1px 1px 0px black,
+               0px 0px 10px black; /* Adding black shadow */
+  font-weight: bold;
+}
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-size: contain; /* Change background-size to contain */
+            background-repeat: no-repeat; /* Ensure background doesn't repeat */
+            background-position: center; /* Center the background */
+        }
+
+        .instagram {
+            background-image: url('../res/instagram-icon.png');
+        }
+
+        .discord {
+            background-image: url('../res/discord-icon.png');
+        }
+
+#nav {
+  width: 100%;
+  position:static;
+  top:-32px;
+  
+}
+
+#nav.affix {
+   position: fixed;
+   top: 0;
+   z-index:10;
+   -webkit-transition: all .6s ease-in-out;
+}
+
+#footer > .container {
+  
+}
+
+@media (min-width: 767px) {
+  .navbar-nav.nav-justified > li{
+      float:none;
+  }
+}
+  
+.navbar-custom .navbar-nav>li>a {
+    color: #ddd;
+    font-size: 21px;
+    height: 80px;
+    line-height: 80px; /* Adjust line-height to match the height */
+    padding: 0 15px; /* Add padding to adjust horizontal alignment */
+    text-shadow: 1px 0px 0px #686868, 
+               1px 1px 0px #686868, 
+  		1px 1px 0px black,
+               0px 0px 10px black; /* Adding black shadow */
+}
+
+.navbar-custom .dropdown-menu li>a:hover {
+    color: #eee;
+}
+
+.navbar-custom .navbar-nav li>a:hover,
+.navbar-nav li .open,
+.navbar-custom .navbar-nav .active a {
+    background-color: #000;
+}
+
+
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.navbar-custom .navbar-nav>.dropdown>a .caret {
+    border-top-color: #999;
+    border-bottom-color: #999;
+}
+
+.navbar-collapse.in {
+    overflow-y: visible;
+}
+
+.navbar-toggle {
+	outline:0;
+}
+
+.divider {
+	height:50px;
+}
+
+.panel {
+	border-width:0;
+}
+
+@media (max-width: 768px) {
+	header {
+	
+	}
+}
+
+#map-canvas {
+  	width: 100%; 
+  	height: 300px;
+	margin: 0;
+	padding: 15px;
+}
+
+.scroll-top {
+   position:fixed;
+   bottom:0;
+   right:6%;
+   z-index:100;
+   background: #f2f3f2;
+   font-size:24px;
+   border-top-left-radius:3px;
+   border-top-right-radius:3px;
+}
+
+.scroll-top a:link,.scroll-top a:visited {
+  color:#222;
+} 
+ 
+/* Стилове за секциите между разделите */
+section {
+  color: #ffffff;
+  min-height: 400px;
+  height: auto !important;
+  height: 100%;
+  padding-top:100px;
+}
+
+.bg-1 {
+	background: url('../res/sunset.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.bg-2 {
+	background: url('//loremflickr.com/50/50') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.bg-3 {
+	background: url('//loremflickr.com/480/320/fashion') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.bg-4 {
+	padding-top:50px;
+    background-color:#e6e6e6;
+}
+
+/* Стилове за галерията */
+.panel .img-responsive {
+	min-height:270px;
+    max-height:270px;
+}
+
+.psp-center {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#shadow {
+	      text-shadow: 1px 0px 0px #686868, 
+               1px 1px 0px #686868, 
+  		1px 1px 0px black,
+               0px 0px 10px black; /* Adding black shadow */
+}
+</style>
+
+	</head>
+	<body>
+<div id="wrap">
+<header class="masthead">
+
+<!-- Carousel. Настройки:
+ data-interval="6000" - интервал от време за смяна слайдовете в милисекунди; data-interval="false" - без автоматична смяна.
+ data-pause="hover" - дали да спира смяната на слайдовете при посочване с мишката; махни го, за да не спира.
+ Ако ще добавяте нови слайдове, трябва да копирате някои редове и да смените параметрите.
+-->
+    <div id="myCarousel" class="carousel slide" data-interval="6000" data-pause="hover">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+	
+	  </ol>
+      <div class="carousel-inner">
+        <div class="item active" style=" background: url('../res/pich.png');background-size:cover;filter:blur(8px); ">
+          <img src="" style="object-fit: cover;"alt="header">
+          <div class="container">
+            <div class="carousel-caption">
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+
+      </div><!-- ...carousel-inner -->
+
+<!-- Смени логото -->	  
+      <div class="logo"><br>
+		Сплотени във времето
+	  </div> 
+      
+    </div><!-- ...carousel -->
+</header>
+
+<!-- Меню... -->
+<div class="navbar navbar-custom navbar-inverse navbar-static-top" style="background-color:#17167c;" id="nav">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav nav-justified">
+<!-- Промени менюто както ти харесва -->		
+          <li><a href="../index.html">Начало</a></li>
+          <!--<li><a href="../pravilnik.html">Правилник</a></li>-->
+          <li><a href="#section2">За нас</a></li>
+          <li><a href="../iniciativi.html">Инициативи</a></li>
+<!-- падащо меню... 	  
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Полезни връзки <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="//yahoo.com">Yahoo</a></li>
+              <li><a href="//google.com">Google</a></li>
+              <li><a href="//fb.com">Facebook</a></li>
+			  <li><a href="//twitter.com">Twitter</a></li>
+				<li role="separator" class="divider"></li>			  
+              <li><a href="//free.bg">FREE.BG</a></li>
+              <li><a href="#"><script>document.write(window.location.hostname);</script></a></li>
+            </ul>
+          </li>
+-->		  
+        </ul>
+      </div>
+    </div>
+</div>
+<!-- ...Меню -->
+
+
+
+
+
+<!-- the forms -->
+
+	<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSch2LuHZptzJX9VYLJmMi04NmiPMS1D8Rl74r6oBfoSfqxGkQ/viewform?embedded=true" style="
+    margin-top: 6%; width: 100vw;  height: 100vh;" frameborder="0">Зарежда се…</iframe>
+
+
+<div id="footer" style="background-color:#17167c;">
+  <div class="container">
+    <p class="text-muted">Copyright ©2024 Сплотени във времето</p>
+  </div>
+</div>
+
+
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+  <div class="modal-content">
+	<div class="modal-header">
+		<button class="close" type="button" data-dismiss="modal">&times;</button>
+		<h3 class="modal-title"></h3>
+	</div>
+	<div class="modal-body">
+		<div id="modalCarousel" class="carousel slide">
+          <div class="carousel-inner">
+          </div>
+          <a class="carousel-control left" href="#modalCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+          <a class="carousel-control right" href="#modalCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+        </div>
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-default" data-dismiss="modal">Затвори</button>
+	</div>
+   </div>
+  </div>
+</div>
+
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>	
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+// Carousel и меню...
+$('.carousel').carousel({interval:false});
+$('#nav').affix({
+      offset: {
+        top: $('header').height()-$('#nav').height()
+      }
+});	
+$('body').scrollspy({ target: '#nav' })
+$('.scroll-top').click(function(){
+  $('body,html').animate({scrollTop:0},1500);
+})
+$('#nav .navbar-nav li>a').click(function(){
+  var link = $(this).attr('href');
+  var posi = $(link).offset().top;
+  $('body,html').animate({scrollTop:posi},700);
+});
+// ...Carousel и меню
+
+// Модалния carousel на галерията...
+$('.panel .img-responsive').each(function(i) {
+  	var item = $('<div class="item"></div>');
+    var itemDiv = $(this).parent('a');
+    var title = $(this).parent('a').attr("title");
+    item.attr("title",title);
+  	$(itemDiv.html()).appendTo(item);
+  	item.appendTo('#modalCarousel .carousel-inner'); 
+    if (i==0) item.addClass('active');
+});
+
+$('#modalCarousel').carousel({interval:false});
+$('#modalCarousel').on('slid.bs.carousel', function () {
+	$('.modal-title').html($(this).find('.active').attr("title"));
+});
+$('.panel-thumbnail>a').click(function(e){
+    e.preventDefault();
+    var idx = $(this).parents('.panel').parent().index();
+  	var id = parseInt(idx);
+  	$('#myModal').modal('show');
+    $('#modalCarousel').carousel(id);
+  	return false;
+});
+// ...Модалния carousel на галерията
+});
+
+// махни по-долния ред, ако не искаш слайдовете да се сменят автоматично
+$('.carousel').carousel();
+
+</script>
+
+
+<!-- 
+Пипай внимателно и си прави винаги
+	резервни копия на работещите варианти,
+		за да може лесно да продължиш напред,
+			ако (когато) нещата се оплескат.
+				Успех! П.Петров
+-->
+	</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page</title>
+</head>
+<body>
+  <script>
+    // Check if the current page is admin.html and redirect
+    if (window.location.pathname.endsWith("admin.html")) {
+      window.location.href = "http://unitedintime.free.bg/cgi-php/admin/admin.php";
+    }
+  </script>
+</body>
+</html>

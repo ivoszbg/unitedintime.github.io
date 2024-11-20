@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<!-- Смени заглавието на страницата -->		
+		<title>МО СВ</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<style>
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+
+html,
+body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.row {
+  margin-left:0px;
+  margin-right:0px;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+}
+
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+  margin-top:50px;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+/* Стилове за карусела и менюто */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.carousel-caption {
+  z-index: 10;
+}
+
+#myCarousel  .item {
+  height: 400px;
+  background-color:#aaa;
+}
+
+#myCarousel img {
+/* ако искаме слайдовете да заемат цял екран
+  position: absolute;
+  top: 0;
+  left: 0; 
+  min-width: 100%;
+*/  
+  height: 400px;
+  margin: 0 auto;
+}
+
+#myCarousel {
+    text-align: center;
+	margin: 0 auto;
+}
+
+#wrap > .container {
+  padding: 60px 15px 0;
+}
+.container .credit {
+  margin: 20px 0;
+}
+
+#footer {
+  background-color:#414141;
+}
+
+#footer a {
+  color:#efefef;
+}
+
+header {
+  background: #333;
+  color:#555;
+}
+
+header .dropdown-menu {
+  top:74px;
+  background: #ffcc33;
+  border-width:0;
+}
+
+h1 {
+  font-size:50px;
+}
+
+.logo {
+  font-size: 60px;
+  position: absolute;
+  z-index: 1200;
+  color: #3331c4;
+  top: 70px;
+  text-align: center;
+  width: 100%;
+  text-shadow: 1px 0px 0px #686868, 
+               1px 1px 0px #686868, 
+  		1px 1px 0px black,
+               0px 0px 10px black; /* Adding black shadow */
+  font-weight: bold;
+}
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-size: contain; /* Change background-size to contain */
+            background-repeat: no-repeat; /* Ensure background doesn't repeat */
+            background-position: center; /* Center the background */
+        }
+
+        .instagram {
+            background-image: url('res/instagram-icon.png');
+        }
+
+        .discord {
+            background-image: url('res/discord-icon.png');
+        }
+
+#nav {
+  width: 100%;
+  position:static;
+  top:-32px;
+}
+
+#nav.affix {
+   position: fixed;
+   top: 0;
+   z-index:10;
+   -webkit-transition: all .6s ease-in-out;
+}
+
+#footer > .container {
+  
+}
+
+@media (min-width: 767px) {
+  .navbar-nav.nav-justified > li{
+      float:none;
+  }
+}
+  
+.navbar-custom .navbar-nav>li>a {
+    color: #ddd;
+    font-size: 21px;
+    height: 80px;
+    line-height: 80px; /* Adjust line-height to match the height */
+    padding: 0 15px; /* Add padding to adjust horizontal alignment */
+      text-shadow: 1px 0px 0px #686868, 
+               1px 1px 0px #686868, 
+  		1px 1px 0px black,
+               0px 0px 10px black; /* Adding black shadow */
+}
+
+.navbar-custom .dropdown-menu li>a:hover {
+    color: #eee;
+}
+
+.navbar-custom .navbar-nav li>a:hover,
+.navbar-nav li .open,
+.navbar-custom .navbar-nav .active a {
+    background-color: #000;
+}
+
+.navbar-custom .navbar-nav>.dropdown>a .caret {
+    border-top-color: #999;
+    border-bottom-color: #999;
+}
+
+.navbar-collapse.in {
+    overflow-y: visible;
+}
+
+.navbar-toggle {
+	outline:0;
+}
+
+.divider {
+	height:50px;
+}
+
+.panel {
+	border-width:0;
+}
+
+@media (max-width: 768px) {
+	header {
+	
+	}
+}
+
+#map-canvas {
+  	width: 100%; 
+  	height: 300px;
+	margin: 0;
+	padding: 15px;
+}
+
+.scroll-top {
+   position:fixed;
+   bottom:0;
+   right:6%;
+   z-index:100;
+   background: #f2f3f2;
+   font-size:24px;
+   border-top-left-radius:3px;
+   border-top-right-radius:3px;
+}
+
+.scroll-top a:link,.scroll-top a:visited {
+  color:#222;
+} 
+ 
+/* Стилове за секциите между разделите */
+section {
+  color: #ffffff;
+  min-height: 400px;
+  height: auto !important;
+  height: 100%;
+  padding-top:100px;
+}
+
+.bg-1 {
+	background: url('//loremflickr.com/640/480/city') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.bg-2 {
+	background: url('//loremflickr.com/50/50') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.bg-3 {
+	background: url('//loremflickr.com/480/320/fashion') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.bg-4 {
+	padding-top:50px;
+    background-color:#e6e6e6;
+}
+
+/* Стилове за галерията */
+.panel .img-responsive {
+	min-height:270px;
+    max-height:270px;
+}
+
+.psp-center {
+	text-align: center;
+	margin: 0 auto;
+}
+
+		</style>
+
+	</head>
+	<body>
+<div id="wrap">
+<header class="masthead">
+
+<!-- Carousel. Настройки:
+ data-interval="6000" - интервал от време за смяна слайдовете в милисекунди; data-interval="false" - без автоматична смяна.
+ data-pause="hover" - дали да спира смяната на слайдовете при посочване с мишката; махни го, за да не спира.
+ Ако ще добавяте нови слайдове, трябва да копирате някои редове и да смените параметрите.
+-->
+    <div id="myCarousel" class="carousel slide" data-interval="6000" data-pause="hover">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+	
+	  </ol>
+      <div class="carousel-inner">
+        <div class="item active" style=" background: url('res/pich.png');background-size:cover;filter:blur(8px); ">
+          <img src="" style="object-fit: cover;"alt="header">
+          <div class="container">
+            <div class="carousel-caption">
+              <h2>Някакъв текст</h2>
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+
+      </div><!-- ...carousel-inner -->
+
+<!-- Смени логото -->	  
+      <div class="logo"><br>
+		Сплотени във времето
+	  </div> 
+      
+    </div><!-- ...carousel -->
+</header>
+
+<!-- Меню... -->
+<div class="navbar navbar-custom navbar-inverse navbar-static-top" style="background-color:#17167c;" id="nav">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav nav-justified">
+<!-- Промени менюто както ти харесва -->		
+          <li><a href="index.html">Начало</a></li>
+          <li><a href="pravilnik.html">Правилник</a></li>
+          <li><a href="#section2">За нас</a></li>
+          <li><a href="#section5">Инициативи</a></li>
+<!-- падащо меню... 	  
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Полезни връзки <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="//yahoo.com">Yahoo</a></li>
+              <li><a href="//google.com">Google</a></li>
+              <li><a href="//fb.com">Facebook</a></li>
+			  <li><a href="//twitter.com">Twitter</a></li>
+				<li role="separator" class="divider"></li>			  
+              <li><a href="//free.bg">FREE.BG</a></li>
+              <li><a href="#"><script>document.write(window.location.hostname);</script></a></li>
+            </ul>
+          </li>
+-->		  
+        </ul>
+      </div>
+    </div>
+</div>
+<!-- ...Меню -->
+  
+<!-- Основно съдържание на страницата -->
+<!-- Раздел "Начало"... -->
+
+<div class="container">
+  <div class="col-sm-10 col-sm-offset-1">
+    <div class="page-header text-center">
+          <h1><b>Правилник на <br>"Сплотени във времето"</b></h1><br>
+<hr>
+    <p style="font-size:19px;">Ние, членовете на „Сплотени във времето“, в качеството си на такива, като<br>
+млади хора и консервативни личности, борещи се за консервативните<br>
+принципи, идеали и ценности взехме общо решение, с което приехме този:<br>
+Правилник на „Сплотени във времето“<br>
+</p>
+<hr>
+<h2><b>Общи разпоредби</b></h2><br>
+
+<p style="font-size:19px;">
+Чл. 1. (1) „Сплотени във времето“, наричано с абревиатурата СВ, е<br>
+неформална младежка организация със седалище в България.<br>
+(2) Като такава СВ извършва своята дейност в съответствие с Конституцията<br>
+на Република България, нормативните актове издадени от Република България<br>
+и договорите, по които Република България е страна.<br>
+Чл. 2. Като консервативна организация СВ и нейните членове се ръководят от<br>
+принципите на консерватизма:<br>
+• Активно гражданство и правомощия на гражданите;<br>
+• Традиционализъм и запазване на културата;<br>
+• Конкурентоспособност на гражданите и право на частна собственост.<br>
+Чл. 3. (1) СВ е независима организация. По отношение на извършваната<br>
+дейност СВ може:<br>
+• да си сътрудничи с трети страни, съгласно ал. 2.;<br>
+• да бъде сътрудник в дейности на трети страни, следвайки и не<br>
+нарушавайки принципите, описани в чл. 2.;<br>
+• да получава спонсорства и финансиране от държавата и трети страни,<br>
+ако това не противоречи на ал. 2.<br>
+(2) Взаимодействията, сътрудничеството, спонсорството и финансирането от<br>
+страна, към и с СВ се извършват по диверсифициран и независим подход, в<br>
+зависимост от областта на извършваната дейност.<br>
+(3) Нарушението на предходните две алинеи се счита за незачитане на<br>
+целостта и суверенитета на организацията, като за това се взимат най-строги<br>
+мерки от страна на председателите.<br>
+Чл. 4. СВ е организация с нестопанска дейност. Извършването на подобни<br>
+дейности от членове на организацията са наказуеми от ръководния орган, като<br>
+същите заплащат глоба в зависимост от типа и мащаба на деянието.<br>
+Чл. 5. (1) За постигането на целите на СВ, а именно да се изгради<br>
+консервативно общество, извършваните дейности се разпределят в основни<br>
+сфери:<br>
+• Гражданска активност<br>
+• Защита от конфликти<br>
+• Спорт<br>
+• Околна среда<br>
+• Икономическо развитие<br>
+• Образование<br>
+• Здравеопазване и превенция<br>
+• Култура<br>
+(2) Към основните сфери в ал. 1. могат да бъдат добавяни и други основни<br>
+сфери.<br>
+(3) Основните сфери на действие в ал. 1. ,т. 1-8 не могат да бъдат премахвани<br>
+или изменяни.<br>
+</p><hr>
+<h2><b>Събрания</b></h2>
+
+<p style="font-size:19px;">
+
+<br>Чл. 6. Събранията в СВ са:<br>
+• Общо събрание на членовете, наричано още само Общо събрание;<br>
+• Събрание на ръководния орган.<br>
+Чл. 7. (1) Общото събрание се провежда веднъж седмично в ден и час,<br>
+определени от ръководителя, съобразно възможностите на членовете.<br>
+(2) Общото събрание се провежда на място определено и договорено от<br>
+председателите на СВ.<br>
+Чл. 8. Ако на Общо събрание присъстват по-малко от половината действащи<br>
+членове, събранието се закрива без гласуване от страна на членовете.<br>
+Чл. 9. (1) На Общо събрание членовете на СВ могат да правят:<br>
+• изказвания – в рамките на до 4 минути;<br>
+• реплики и дуплики – в рамките на до 2 минути;<br>
+• процедурни предложения;<br>
+• процедури по начина на водене- в рамките на до 1 минута;<br>
+• предложения (идеи) за проекти (дейности).<br>
+(2) Изказвания, реплики, дуплики, процедурни предложения, процедури по<br>
+начина на водене, както и предложения (идеи) за проекти (дейности) от едно и<br>
+също естество не могат да бъдат правени повече от веднъж.<br>
+(3) Предложенията за проекти и процедурните предложения се приемат, ако за<br>
+тях са гласували повече от половината от присъстващите членове.<br>
+(4) Редът на изказване по действията от ал. 1. т. 1-5 е процедури по начина на<br>
+водене, процедурни предложения, реплики, дуплики, изказвания,<br>
+предложения за проекти, както и според поредността на направените искания.<br>
+(5) Никой не може да се изказва без да му е дадена думата.<br>
+(6) Водещият срещата следва реда за изказване по ал. 4., ако изяви желание да<br>
+се изкаже.<br>
+Чл. 10. (1) Събранието на ръководния орган се провежда поне веднъж на три<br>
+месеца в ден, час и място определени от председателите на СВ.<br>
+(2) На Събрание на ръководния орган присъстват лицата по чл. 9. ал. 2. т. 1-5.<br>
+(3) На събранието се обсъжда дейността на организацията, стратегии за<br>
+развитие, нови членове.<br>
+(4) Събранието се води от един от председателите по тяхно решение като се<br>
+спазват правилата за водене по чл. 8., 9., 11. и 12.<br>
+Чл. 11. Проверка на кворум, гласуване и искане на думата по чл. 9., ал. 1. се<br>
+извършва от водещия на събранието чрез вдигане на ръка от страна на<br>
+членовете.<br>
+Чл. 12. Гласуванията са лични. Гласува се със „за“, „против“ и „въздържал<br>
+се“.<br>
+</p>
+<hr>
+<h2><b>Членове и длъжности</b></h2><br>
+
+<p style="font-size:19px;">
+
+Чл. 13. Член може да бъде всеки български гражданин между 15 и 24 години,<br>
+който не е поставен под запрещение и е одобрен за член от ръководния орган<br>
+на организацията.<br>
+Чл. 14. Всеки член на организацията има правомощието да гласува, да се<br>
+изказва, да дава предложения и да бъде част от ръководния орган.<br>
+Чл. 15. Членовете се задължават да бъдат активни в дейността на<br>
+организацията, да я популяризират, да не нарушават консервативните<br>
+принципи, идеали и ценности, да заплащат месечен членски внос в размер на<br>
+пет български лева.<br>
+Чл. 16. Членството на дадено лице може да бъде прекратено по решение на<br>
+ръководния орган, ако лицето нарушава сериозно правилника на СВ, етичните<br>
+норми в правилника, наранява имиджа на организацията или по друг начин<br>
+нарушава дейността и развитието на СВ.<br>
+Чл. 17. (1) Членовете избират ръководния орган на СВ на всеки две години.<br>
+(2) Членове на ръководния орган са:<br>
+1. двамата председатели;<br>
+2. ръководителят на организацията;<br>
+3. секретарят;<br>
+4. счетоводителят;<br>
+5. пиарът.<br>
+(3) За длъжностна позиция може да се кандидатира всеки член на<br>
+организацията. Изключение правят двамата председатели.<br>
+(4) За избран за една от гореописаните длъжности се счита кандидатът,<br>
+получил най-много гласове при гласували поне 2/3 от действащите членове на<br>
+организацията.<br>
+Чл. 18. Ръководителят на организацията води Общото събрание, съставя<br>
+дневния ред, следи за спазването на етичните норми, подпомага дейността на<br>
+двамата председатели.<br>
+Чл. 19. (1) Секретарят прави отчет на дейността на организацията и се грижи<br>
+за неговото реално и дигитално съхранение.<br>
+(2) Секретарят води протокол на всяко едно събрание, като записва<br>
+направените предложения, гласувания и изказвания по точен и ясен начин.<br>
+(3) Протоколът трябва да включва:<br>
+1. вид на събранието;<br>
+2. дата, час и място на провеждане;<br>
+3. водещ на събранието;<br>
+4. присъствие;<br>
+5. списък с изказванията, репликите, дупликите, процедурите и<br>
+предложенията с времетраенето им и това на тяхното обсъждане по чл. 9., ал. 1<br>
+(4) Секретарят води и съхранява отчет на действащите членове.<br>
+(5) Секретарят сигнализира ръководния орган за неактивни членове.<br>
+Чл. 20. (1) Счетоводителят съхранява реално и дигитално и обработва<br>
+финансовата информация на организацията, като за своята дейност<br>
+взаимодейства със секретаря и се съобразява със счетоводните стандарти на<br>
+Република България.<br>
+(2) Счетоводителят събира месечен членски внос от всеки член, като<br>
+осчетоводява прихода непосредствено след получаването му.<br>
+(3) Членския внос се заплаща на счетоводителя до 10 число на следващия<br>
+месец.<br>
+(4) Счетоводителят сигнализира ръководния орган за член, незаплатил 3<br>
+членски вноски.<br>
+(5) Счетоводителят изготвя доклад на финансовите движения и развитието за<br>
+последното тримесечие (няма нужда да е дълъг, но да отразява точно<br>
+движенията и тяхното основание), като включва и план за следващото<br>
+тримесечие, разработен съвместно с останалите членове на ръководния орган.<br>
+Чл. 21. Пиарът популяризира СВ и дейностите му и спомага в процеса на<br>
+взаимодействие между организацията и сътрудниците/спонсорите. Пиарът<br>
+има за цел да изгради обществената визия на СВ спрямо целите на<br>
+организацията и нейната дейност.<br>
+</p>
+<hr>
+<h2><b>Етични норми</b></h2><br>
+
+<p style="font-size:19px;">
+Чл. 22. Членовете на организацията се ръковоят от принципите на<br>
+консерватизма.<br>
+Чл. 23. (1) Член на организацията се отнася с дължимото уважение към<br>
+останалите членове, независимо от собствените им убеждения и изразяваното<br>
+от тях мнение като граждани и хора.<br>
+(2) Членовете нямат право да прекъсват изказващия се, да отправят лични<br>
+нападки, оскърбителни думи, жестове или заплахи против когото и да било,<br>
+да разгласяват данни, отнасящи се до личния живот или увреждащи доброто<br>
+име на останалите членове, да имат непристойно поведение или да извършват<br>
+постъпки, с които нарушават реда и процеса на водене.<br>
+Чл. 24. По отношение на членовете на организацията, по време на редовна<br>
+среща на клуба може да се налагат следните дисциплинарни мерки:<br>
+1. напомняне;<br>
+2. забележка;<br>
+3. порицание;<br>
+4. отстраняване<br>
+Чл. 25. Напомняне се прави от водещия към член на организацията, който<br>
+се отклонява от предмета на разискванията.<br>
+Чл. 26. Забележка се прави от водещия към член, който се е обърнал към<br>
+член/ членове или гост/ гости с оскърбителни думи, жестове или със заплаха.<br>
+Чл. 27. Порицание се налага от водещия на член на клуба, който нарушава<br>
+реда по време на срещата или е създал безредие в залата.<br>
+Чл. 28. Водещият отнема думата на член, който:<br>
+1. по време на изказването си има наложени две от предвидените в чл. 24, т.<br>
+1 – 3 дисциплинарни мерки;<br>
+2. след изтичане на времето за изказване продължава изложението си<br>
+въпреки поканата на водещия да го прекрати.<br>
+Чл. 29. Водещият може да отстрани от срещата член на организацията,<br>
+който:<br>
+1. възразява против наложената дисциплинарна мярка по груб и непристоен<br>
+начин;<br>
+2. продължително не дава възможност за нормална работа по време на<br>
+събранието;<br>
+Чл. 30. Ръководителят може да отстрани до три събрания член на<br>
+организацията, който:<br>
+1. оскърбява СВ, членовете на СВ или председателите;<br>
+2. призовава към или упражнява насилие по време на събранието.<br>
+Чл. 31. (1) Член на клуба, подложен на мярката от чл. 24, т.4 може да я<br>
+обжалва в срок до следващото Общо събрание.<br>
+(2) Обжалването на мярката става на следващо събрание след налагането ѝ,<br>
+като то бива разглеждано преди дневния ред.<br>
+(3) На същото събрание обжалващият излага пръв своето становище, а<br>
+после и водещият на предишното събрание своето такова по наложената<br>
+мярка.<br>
+(4) Обжалването се гласува, като за приемането му се изисква положителен<br>
+вот „ЗА“ от една втора от действащите членове на СВ.<br>
+(5) Решението на членовете е категорично и не подлежи на повторно<br>
+обжалване.<br>
+Чл. 32. (1) Член, отсъствал неуважително повече от три поредни пъти, се<br>
+предупреждава от ръководния орган за последващо гласуване от ръководния<br>
+орган за прекратяване на членството на съответното лице, ако същия не се яви<br>
+на следващото Общо събрание и не обясни причината за отсъствията си.<br>
+(2) При неявяване на следващо Общо събрание, то на същото членовете на<br>
+МКД взимат решение относно прекратяване на членството на отсъствалия с<br>
+повече от половината от действащите членове на СВ.<br>
+Чл. 33. Член, неприсъствал на повече от три дейности/ инициативи/<br>
+проекти, се подлага на мярката по чл. 32.<br>
+</p>
+<hr>
+<h2><b>Допълнителни разпоредби</b></h2><br>
+
+<p style="font-size:19px;">
+§ 1. (1) Правилникът на СВ може да бъде изменян по предложение на поне 3<br>
+члена на организацията.<br>
+(2) Новият правилник е приет, ако за него на Общо събрание са гласували<br>
+повече от половината действащи членове на организацията.<br>
+(3) Новият правилник влиза в сила ден след гласуването му на Общо<br>
+събрание.<br>
+§ 2. По въпроси, неуредени в този правилник, се приемат решения на Общо<br>
+събрание.<br>
+§ 3. При неразбирателство за тълкуването на норми от текущия правилник<br>
+двамата председатели заедно с ръководителя взимат решение.<br>
+§ 4. Водещ по смисъла на този правилник представлява ръководителят или<br>
+друго лице, водещо събранието. <br>
+
+
+</p>
+    </div>
+
+    <p class="lead text-center"> </p>
+
+
+  </div>
+</div>
+<!-- ...Раздел "Начало" -->
+
+<div id="footer" style="background-color:#17167c;">
+  <div class="container">
+    <p class="text-muted">Copyright ©2024 Сплотени във времето</p>
+  </div>
+</div>
+
+<ul class="nav pull-right scroll-top">
+  <li><a href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
+</ul>
+
+
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+  <div class="modal-content">
+	<div class="modal-header">
+		<button class="close" type="button" data-dismiss="modal">&times;</button>
+		<h3 class="modal-title"></h3>
+	</div>
+	<div class="modal-body">
+		<div id="modalCarousel" class="carousel slide">
+          <div class="carousel-inner">
+          </div>
+          <a class="carousel-control left" href="#modalCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+          <a class="carousel-control right" href="#modalCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+        </div>
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-default" data-dismiss="modal">Затвори</button>
+	</div>
+   </div>
+  </div>
+</div>
+
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>	
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+// Carousel и меню...
+$('.carousel').carousel({interval:false});
+$('#nav').affix({
+      offset: {
+        top: $('header').height()-$('#nav').height()
+      }
+});	
+$('body').scrollspy({ target: '#nav' })
+$('.scroll-top').click(function(){
+  $('body,html').animate({scrollTop:0},1500);
+})
+$('#nav .navbar-nav li>a').click(function(){
+  var link = $(this).attr('href');
+  var posi = $(link).offset().top;
+  $('body,html').animate({scrollTop:posi},700);
+});
+// ...Carousel и меню
+
+// Модалния carousel на галерията...
+$('.panel .img-responsive').each(function(i) {
+  	var item = $('<div class="item"></div>');
+    var itemDiv = $(this).parent('a');
+    var title = $(this).parent('a').attr("title");
+    item.attr("title",title);
+  	$(itemDiv.html()).appendTo(item);
+  	item.appendTo('#modalCarousel .carousel-inner'); 
+    if (i==0) item.addClass('active');
+});
+
+$('#modalCarousel').carousel({interval:false});
+$('#modalCarousel').on('slid.bs.carousel', function () {
+	$('.modal-title').html($(this).find('.active').attr("title"));
+});
+$('.panel-thumbnail>a').click(function(e){
+    e.preventDefault();
+    var idx = $(this).parents('.panel').parent().index();
+  	var id = parseInt(idx);
+  	$('#myModal').modal('show');
+    $('#modalCarousel').carousel(id);
+  	return false;
+});
+// ...Модалния carousel на галерията
+});
+
+// махни по-долния ред, ако не искаш слайдовете да се сменят автоматично
+$('.carousel').carousel();
+
+</script>
+
+
+<!-- 
+Пипай внимателно и си прави винаги
+	резервни копия на работещите варианти,
+		за да може лесно да продължиш напред,
+			ако (когато) нещата се оплескат.
+				Успех! П.Петров
+-->
+	</body>
+</html>
