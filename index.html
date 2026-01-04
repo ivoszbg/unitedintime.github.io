@@ -33,16 +33,35 @@
 
 <body class="text-gray-200 scroll-smooth">
 
-<div class="navbar fixed top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/5">
-    <div class="container mx-auto px-6">
-        <div class="flex-1">
-            <span class="text-xl font-bold tracking-widest text-white uppercase">Сплотени във времето</span>
+<div class="navbar fixed top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/5 h-16">
+    <div class="container mx-auto px-4">
+        <div class="flex-none lg:hidden">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-sm text-white p-0 mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-black border border-white/10 rounded-none w-52 uppercase tracking-widest text-xs">
+                    <li><a href="#principles">Принципи</a></li>
+                    <li><a href="#spheres">Сфери на действие</a></li>
+                    <li><a href="locations.html">Локации</a></li>
+                    <li><a href="#join" class="text-gold">Присъедини се</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="flex-none hidden lg:flex">
-            <ul class="menu menu-horizontal px-1 font-medium tracking-tight">
-                <li><a href="#principles" class="hover:text-gold">Принципи</a></li>
-                <li><a href="#spheres" class="hover:text-gold">Сфери на действие</a></li>
-                <li><a href="locations.html" class="hover:text-gold">Локации</a></li>
+
+        <div class="flex-1">
+            <a href="#" class="text-base md:text-xl font-bold tracking-[0.15em] text-white uppercase whitespace-nowrap">
+                Сплотени във времето<span class="hidden xs:inline"></span>
+            </a>
+        </div>
+
+        <div class="flex-none hidden lg:block">
+            <ul class="menu menu-horizontal px-1 font-medium tracking-tight text-sm">
+                <li><a href="#principles" class="hover:text-gold transition-colors">Принципи</a></li>
+                <li><a href="#spheres" class="hover:text-gold transition-colors">Сфери на действие</a></li>
+                <li><a href="locations.html" class="hover:text-gold transition-colors">Локации</a></li>
                 <li><a href="#join" class="btn btn-outline border-gold text-gold hover:bg-gold hover:text-black ml-4 btn-sm rounded-none">Присъедини се</a></li>
             </ul>
         </div>
@@ -196,29 +215,28 @@
                 <i class="fab fa-instagram text-4xl text-gold mb-6 group-hover:scale-110 transition-transform"></i>
                 <h3 class="text-xl font-bold text-white mb-2">Пиши ни в Instagram</h3>
                 <p class="text-gray-500 text-sm">Най-бързият начин за неофициален разговор и въпроси.
-                	<br><br> @united_in_times</p>
+                    <br><br> @united_in_times</p>
             </a>
 
             <a href="tel:+35977765294" class="group border border-white/5 p-10 text-center hover:border-gold/50 transition-all duration-500 bg-white/[0.02]">
                 <i class="fas fa-phone-alt text-3xl text-gold mb-6 group-hover:scale-110 transition-transform"></i>
                 <h3 class="text-xl font-bold text-white mb-2">Обади ни се</h3>
                 <p class="text-gray-500 text-sm">Свържи се директно с нас за детайли.
-                	<br><br> тел: (+359) 87 776 5294
-									<br> моб: (+359) 87 776 5294</p>
+                    <br><br> тел: (+359) 87 776 5294
+                                    <br> моб: (+359) 87 776 5294</p>
             </a>
 
-						<div class="group border border-white/5 p-10 text-center hover:border-gold/50 transition-all duration-500 bg-white/[0.02]">
-						    <i class="fas fa-envelope text-3xl text-gold mb-6 group-hover:scale-110 transition-transform block"></i>
-						    <h3 class="text-xl font-bold text-white mb-2">Изпрати имейл</h3>
-						    
-						    <div class="mt-6 space-y-3">
-						        <textarea id="emailMessage" placeholder="Напишете Вашето заявление или въпрос тук..." rows="3" class="w-full bg-black border border-white/10 p-2 text-sm focus:border-gold outline-none transition-colors text-white resize-none"></textarea>
-						        
-						        <button onclick="sendEmail()" class="w-full bg-gold text-black py-2 text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors">
-						            Изпрати заявление
-						        </button>
-						    </div>
-						</div>
+                        <div class="group border border-white/5 p-10 text-center hover:border-gold/50 transition-all duration-500 bg-white/[0.02]">
+                            <i class="fas fa-envelope text-3xl text-gold mb-6 group-hover:scale-110 transition-transform block"></i>
+                            <h3 class="text-xl font-bold text-white mb-2">Изпрати имейл</h3>
+
+                            <div class="mt-6 space-y-3">
+                                <textarea id="emailMessage" placeholder="Напишете Вашето заявление или въпрос тук..." rows="3" class="w-full bg-black border border-white/10 p-2 text-sm focus:border-gold outline-none transition-colors text-white resize-none"></textarea>
+                                <button onclick="sendEmail()" class="w-full bg-gold text-black py-2 text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors">
+                                    Изпрати заявление
+                                </button>
+                            </div>
+                        </div>
         </div>
     </div>
 </section>
