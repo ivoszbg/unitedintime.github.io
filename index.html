@@ -1,243 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<!-- New main color pallete: https://colorhunt.co/palette/0032852a629aff7f3effda78 -->
+<html lang="bg" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сплотени във времето (СВ)</title>
 
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<!-- Смени заглавието на страницата -->		
-		<title>МО СВ</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<!--[if lt IE 9]>
-		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<link rel="stylesheet" href="css/index.css">
-	</head>
-	<body>
-			<!-- Externally include the header from header.html, more in the js part of things -->
-			<div id="header"></div>
-	
-			<!-- ...Меню -->
-			<!-- Основно съдържание на страницата -->
-			<!-- Раздел "Начало"... -->
-			<div class="container">
-				<div class="col-sm-10 col-sm-offset-1">
-					<h1 style="padding:20px; text-align: center;">Кои сме ние?</h1>
-						<h1></h1>
-					<p style="font-size:16px;"><b>"Сплотени във времето"</b> е неправителствена организация, чиято основна кауза е запазването на българската култура и изграждането на консервативно ядро в старозагорска област. Нашата цел е да възродим и поддържаме националната идентичност, като се фокусираме върху нашето културно наследство и история. Чрез различни образователни и културни събития, ние се стремим да вдъхновим младите хора да се ангажират със защитата и продължението на нашите общонародни традиции и национално наследство.</p>
-					<p class="lead text-center"> </p>
-					
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.2/dist/full.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-				</div>
-			</div>
-			<!-- ...Раздел "Начало" -->
-			<div class="divider"></div>
-			<section class="bg-1">
-				<div class="col-sm-6 col-sm-offset-3 text-center"></div>
-			</section>
-			<!-- Раздел "За нас"... -->  
-			<div class="divider" id="section2"></div>
-			<div class="row">
-				<div class="col-sm-10 col-sm-offset-1">
-					<br>
-					<h1 style="text-align:center;">Социални Мрежи</h1>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gold': '#d4af37',
+                        'dark-bg': '#0a0a0a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(10,10,10,0.4) 0%, rgba(10,10,10,1) 100%);
+        }
+    </style>
+</head>
 
-					<br><br>
-					<div class="social-icons">
-						<a href="https://www.instagram.com/united_in_times/" class="instagram" aria-label="Instagram"></a>
-						<a href="https://discord.gg/kJxUhUeUgG" class="discord" aria-label="Discord"></a>
-					</div>
+<body class="text-gray-200 scroll-smooth">
 
-					<div class="divider"></div>
-				</div>
-			</div>
-			<!-- Раздел ..."За нас" -->
-			<h1 style="padding:20px; text-align: center;">Галерия</h1>
-			<!-- Раздел "Галерия"... -->  
-			<div class="bg-4">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-4 col-xs-6">
-							<div class="panel panel-default">
-								<div class="panel-thumbnail">
-									<a href="#" title="Представяне на проект за социалните мрежи">
-									<img src="res/pic1.png" class="img-responsive psp-center" alt="business">
-									</a>
-								</div>
-								<div class="panel-body">
-									<p>Представяне на проект за социалните мрежи</p>
-									<p></p>
-								</div>
-							</div>
+<div class="navbar fixed top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/5">
+    <div class="container mx-auto px-6">
+        <div class="flex-1">
+            <span class="text-xl font-bold tracking-widest text-white uppercase">Сплотени във времето</span>
+        </div>
+        <div class="flex-none hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 font-medium tracking-tight">
+                <li><a href="#principles" class="hover:text-gold">Принципи</a></li>
+                <li><a href="#spheres" class="hover:text-gold">Сфери на действие</a></li>
+                <li><a href="locations.html" class="hover:text-gold">Локации</a></li>
+                <li><a href="#join" class="btn btn-outline border-gold text-gold hover:bg-gold hover:text-black ml-4 btn-sm rounded-none">Присъедини се</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<section class="relative min-h-screen flex items-center justify-center pt-20">
+    <div class="relative z-10 container mx-auto px-6 text-center">
+        <div class="flex justify-center mb-2">
+            <img src="images/united_logo.png" alt="СВ Лого" class="h-56 md:h-72 object-contain" />
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+                Да възродим българската идентичност
+            </h1>
+            <p class="text-xl md:text-xl text-gray-400 font-light mb-10 leading-relaxed">
+                Ние сме младежка организация, ангажирана с българските традиции, активното гражданство и консерватизма.
+            </p>
+            <a href="#join" class="btn bg-gold border-gold text-black hover:bg-white hover:border-white px-12 btn-lg rounded-none uppercase tracking-widest text-xs font-bold transition-all">
+                Стани част от нас
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="principles" class="py-32 bg-dark-bg border-y border-white/5">
+    <div class="container mx-auto px-6">
+        <div class="mb-20 text-center md:text-left">
+            <h2 class="text-sm font-bold text-gold uppercase tracking-[0.3em] mb-4">Нашите основи</h2>
+            <p class="text-4xl md:text-5xl font-bold text-white tracking-tight">На какво се градим</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16 max-w-6xl mx-auto">
+            <div class="group">
+                <div class="w-12 h-1 mb-6 bg-gold transition-all group-hover:w-20"></div>
+                <h3 class="text-2xl font-bold text-white mb-4">Консерватизъм</h3>
+                <p class="text-gray-500 leading-relaxed text-sm"> <!-- was also italic -->
+                    Вярваме в йерархията на ценностите, реда и приемствеността. За нас консерватизмът е не просто политическа нагласа, а философия на съзиданието, която цени изпитаните във времето институции като семейството, вярата и общността, предпазвайки ги от разрушителните течения на модерното време.
+                </p>
+            </div>
+
+            <div class="group">
+                <div class="w-12 h-1 mb-6 bg-gold transition-all group-hover:w-20"></div>
+                <h3 class="text-2xl font-bold text-white mb-4">Традиционализъм</h3>
+                <p class="text-gray-500 leading-relaxed text-sm">
+                    Запазването на българската култура, история и национална идентичност е в основата на нашата дейност. Традициите са фундаментът, върху който се изгражда устойчива държава. Чрез тях съхраняваме историческата памет и укрепваме националното самосъзнание за идните поколения.
+                </p>
+            </div>
+
+            <div class="group">
+                <div class="w-12 h-1 mb-6 bg-gold transition-all group-hover:w-20"></div>
+                <h3 class="text-2xl font-bold text-white mb-4">Активно гражданство</h3>
+                <p class="text-gray-500 leading-relaxed text-sm">
+                    Вярваме в личната отговорност към общността. Насърчаваме участието в обществения живот чрез образование, културни инициативи и доброволчество. Активното гражданство означава осъзнат ангажимент към наследството и готовност за действие в защита на ценностите.
+                </p>
+            </div>
+
+            <div class="group">
+                <div class="w-12 h-1 mb-6 bg-gold transition-all group-hover:w-20"></div>
+                <h3 class="text-2xl font-bold text-white mb-4">Частна собственост</h3>
+                <p class="text-gray-500 leading-relaxed text-sm">
+                    Подкрепяме неприкосновеното право на лична инициатива и собственост като основа за развитие. Свободната и отговорна личност допринася най-ефективно за общото благо. Уважението към труда и стабилната икономическа среда са ключови за изграждането на силна и независима общност.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="spheres" class="py-32 bg-black">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-sm font-bold text-gold uppercase tracking-[0.3em] mb-4">Дейност</h2>
+        <p class="text-4xl font-bold text-white mb-16 tracking-tight">Сфери на инициатива</p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            <div class="border border-white/5 p-8 hover:border-gold/50 transition-colors group">
+                <i class="fas fa-bullhorn text-gold mb-4 text-2xl group-hover:scale-110 transition-transform"></i>
+                <p class="uppercase tracking-widest text-[10px] font-bold">Гражданска активност</p>
+            </div>
+            <div class="border border-white/5 p-8 hover:border-gold/50 transition-colors group">
+                <i class="fas fa-shield-halved text-gold mb-4 text-2xl group-hover:scale-110 transition-transform"></i>
+                <p class="uppercase tracking-widest text-[10px] font-bold">Защита от конфликти</p>
+            </div>
+            <div class="border border-white/5 p-8 hover:border-gold/50 transition-colors group">
+                <i class="fas fa-medal text-gold mb-4 text-2xl group-hover:scale-110 transition-transform"></i>
+                <p class="uppercase tracking-widest text-[10px] font-bold">Спорт</p>
+            </div>
+            <div class="border border-white/5 p-8 hover:border-gold/50 transition-colors group">
+                <i class="fas fa-leaf text-gold mb-4 text-2xl group-hover:scale-110 transition-transform"></i>
+                <p class="uppercase tracking-widest text-[10px] font-bold">Околна среда</p>
+            </div>
+            <div class="border border-white/5 p-8 hover:border-gold/50 transition-colors group">
+                <i class="fas fa-chart-line text-gold mb-4 text-2xl group-hover:scale-110 transition-transform"></i>
+                <p class="uppercase tracking-widest text-[10px] font-bold">Икономика</p>
+            </div>
+            <div class="border border-white/5 p-8 hover:border-gold/50 transition-colors group">
+                <i class="fas fa-book-open text-gold mb-4 text-2xl group-hover:scale-110 transition-transform"></i>
+                <p class="uppercase tracking-widest text-[10px] font-bold">Образование</p>
+            </div>
+            <div class="border border-white/5 p-8 hover:border-gold/50 transition-colors group">
+                <i class="fas fa-heart-pulse text-gold mb-4 text-2xl group-hover:scale-110 transition-transform"></i>
+                <p class="uppercase tracking-widest text-[10px] font-bold">Здравеопазване</p>
+            </div>
+            <div class="border border-white/5 p-8 hover:border-gold/50 transition-colors group">
+                <i class="fas fa-masks-theater text-gold mb-4 text-2xl group-hover:scale-110 transition-transform"></i>
+                <p class="uppercase tracking-widest text-[10px] font-bold">Култура</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="location" class="py-32 bg-dark-bg border-y border-white/5">
+    <div class="container mx-auto px-6 text-center max-w-4xl">
+        <h2 class="text-sm font-bold text-gold uppercase tracking-[0.3em] mb-4">Нашите срещи</h2>
+        <h3 class="text-4xl md:text-5xl font-bold text-white mb-8">Стара Загора & София</h3>
+        <p class="text-gray-400 text-xl mb-12 font-light leading-relaxed">
+            Всяка седмица провеждаме редовни сбирки, на които планираме бъдещите си инициативи и обсъждаме важни обществени теми. Ела и се запознай с нас на живо.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row justify-center gap-10 mb-16">
+            <div class="flex flex-col items-center">
+                <span class="text-white font-bold text-2xl mb-1">Стара Загора</span>
+                <span class="text-gold text-sm uppercase tracking-widest">Всеки петък | 19:30</span>
+            </div>
+            <div class="w-px h-12 bg-white/10 hidden sm:block"></div>
+            <div class="flex flex-col items-center">
+                <span class="text-white font-bold text-2xl mb-1">София</span>
+                <span class="text-gold text-sm uppercase tracking-widest">Скоро!</span>
+            </div>
+        </div>
+
+        <a href="locations.html" class="btn btn-outline border-gold text-gold hover:bg-gold hover:text-black px-10 rounded-none uppercase tracking-widest text-xs font-bold">
+            Виж точните локации на картата
+        </a>
+    </div>
+</section>
+
+<section id="join" class="py-32 bg-black">
+    <div class="container mx-auto px-6 max-w-6xl">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Стани част от нас</h2>
+            <div class="flex flex-wrap justify-center gap-8 text-sm uppercase tracking-widest text-gold font-bold">
+                <span class="hidden md:block text-white/20">|</span>
+                <span>Имаш интерес и/или въпроси? Свържи се с нас!</span>
+                <span class="hidden md:block text-white/20">|</span>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <a href="https://instagram.com/united_in_times" target="_blank" class="group border border-white/5 p-10 text-center hover:border-gold/50 transition-all duration-500 bg-white/[0.02]">
+                <i class="fab fa-instagram text-4xl text-gold mb-6 group-hover:scale-110 transition-transform"></i>
+                <h3 class="text-xl font-bold text-white mb-2">Пиши ни в Instagram</h3>
+                <p class="text-gray-500 text-sm">Най-бързият начин за неофициален разговор и въпроси.
+                	<br><br> @united_in_times</p>
+            </a>
+
+            <a href="tel:+35977765294" class="group border border-white/5 p-10 text-center hover:border-gold/50 transition-all duration-500 bg-white/[0.02]">
+                <i class="fas fa-phone-alt text-3xl text-gold mb-6 group-hover:scale-110 transition-transform"></i>
+                <h3 class="text-xl font-bold text-white mb-2">Обади ни се</h3>
+                <p class="text-gray-500 text-sm">Свържи се директно с нас за детайли.
+                	<br><br> тел: (+359) 87 776 5294
+									<br> моб: (+359) 87 776 5294</p>
+            </a>
+
+						<div class="group border border-white/5 p-10 text-center hover:border-gold/50 transition-all duration-500 bg-white/[0.02]">
+						    <i class="fas fa-envelope text-3xl text-gold mb-6 group-hover:scale-110 transition-transform block"></i>
+						    <h3 class="text-xl font-bold text-white mb-2">Изпрати имейл</h3>
+						    
+						    <div class="mt-6 space-y-3">
+						        <textarea id="emailMessage" placeholder="Напишете Вашето заявление или въпрос тук..." rows="3" class="w-full bg-black border border-white/10 p-2 text-sm focus:border-gold outline-none transition-colors text-white resize-none"></textarea>
+						        
+						        <button onclick="sendEmail()" class="w-full bg-gold text-black py-2 text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors">
+						            Изпрати заявление
+						        </button>
+						    </div>
 						</div>
-						<div class="col-sm-4 col-xs-6">
-							<div class="panel panel-default">
-								<div class="panel-thumbnail">
-									<a href="#" title="Интервюиране">
-									<img src="res/pic3.png" class="img-responsive psp-center" alt="technics">
-									</a>
-								</div>
-								<div class="panel-body">
-									<p>Интервюиране</p>
-									<p></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4 col-xs-6">
-							<div class="panel panel-default">
-								<div class="panel-thumbnail">
-									<a href="#" title="Създаване на образователни клипове">
-									<img src="res/pic2.png" class="img-responsive psp-center" alt="nature">
-									</a>
-								</div>
-								<div class="panel-body">
-									<p>Създаване на образователни клипове</p>
-									<p></p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- ...row -->
-				</div>
-				<!-- ...container -->
-			</div>
-			<!-- ...Раздел "Галерия" -->
-			<br>
-			<!-- Раздел "Адрес"... -->
-			<div class="divider" id="section4"></div>
-			<div class="row">
-				<div class="col-md-8 col-md-offset-1">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-10 col-sm-offset-1">
-					<h1 style="text-align:center">Сбирки</h1>
-					<br>
-				</div>
-				<div id="map-canvas" style="text-align: center;">
-					<!-- тук е картата - смени географски дължина и ширина  -->    
-					<img style="max-width: 100%; height: auto; width: auto; border: 5px solid #4F4DCE;" src="https://static-maps.yandex.ru/1.x/?lang=en-US&ll=25.6357522,42.4259175&z=15&l=map&size=600,300" alt="Yandex Map of 27.8851585,43.1904088">
-				</div>
-				<div class="col-sm-8"></div>
-				<div class="col-sm-3 pull-right" id="contboxid">
-					<address>
-						<b style="font-size: 19px;">Всеки петък от 19:00</b> <br>
-						<!-- Смени името, адреса, телефоните и имейла. -->
-						<span id="map-input">
-						Orbita, улица „Св. Климент Охридски<br />
-						Стара Загора, България</span>
-						<br />тел: (359) 87 776 5294
-						<br />моб: (359) 87 776 5294
-					</address>
-					<address>
-						<strong>Ел. поща:</strong><br>
-						<a href="mailto:#">mladikonservatori@gmail.com</a>
-					</address>
-				</div>
-				<!-- ...class="col-sm-3 pull-right" id="contboxid" -->
-			</div>
-			<!-- ...row -->
-			<!-- ...Раздел "Адрес" -->
-		</div>
-		<!-- ...wrap -->
-		<div id="footer">
-			<div class="container">
-				<p class="text-muted">Copyright ©2024 Сплотени във времето</p>
-			</div>
-		</div>
-		<ul class="nav pull-right scroll-top">
-			<li><a href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
-		</ul>
-		<div class="modal fade" id="myModal" role="dialog">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button class="close" type="button" data-dismiss="modal">&times;</button>
-						<h3 class="modal-title"></h3>
-					</div>
-					<div class="modal-body">
-						<div id="modalCarousel" class="carousel slide">
-							<div class="carousel-inner">
-							</div>
-							<a class="carousel-control left" href="#modalCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-							<a class="carousel-control right" href="#modalCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button class="btn btn-default" data-dismiss="modal">Затвори</button>
-					</div>
-				</div>
-			</div>
-		</div>
+        </div>
+    </div>
+</section>
 
-		<!-- Scripts -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>	
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<script>
-			/* Hack to modularize parts like the header */
-			$(function(){
-				$("#header").load("header.html"); 
-			});
+<footer class="py-20 bg-black text-center border-t border-white/5">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-center gap-8 mb-10 text-gray-500">
+            <a href="https://www.instagram.com/united_in_times" class="hover:text-gold transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+            <a href="https://www.facebook.com/united.in.time" class="hover:text-gold transition-colors"><i class="fab fa-facebook-f text-xl"></i></a>
+        </div>
+        <p class="text-[10px] tracking-[0.3em] text-gray-600 uppercase">
+            © 2025 Сплотени във времето. Верни на миналото, силни в бъдещето.
+        </p>
+    </div>
+</footer>
 
-			$(document).ready(function(){
-			// Carousel и меню...
-			$('.carousel').carousel({interval:false});
-			$('#nav').affix({
-				offset: {
-					top: $('header').height()-$('#nav').height()
-				}
-			});	
-			
-			if($(window).width() < 500) {
-				$('#contboxid').removeClass('pull-right');
-				$('#contboxid').addClass('psp-center');
-				$('#map-canvas').style.height = "auto";
-			}
-			 
-			$('body').scrollspy({ target: '#nav' })
-			$('.scroll-top').click(function(){
-			 $('body,html').animate({scrollTop:0},1500);
-			})
-			$('#nav .navbar-nav li>a').click(function(){
-			 var link = $(this).attr('href');
-			 var posi = $(link).offset().top;
-			 $('body,html').animate({scrollTop:posi},700);
-			});
-			// ...Carousel и меню
-			
-			// Модалния carousel на галерията...
-			$('.panel .img-responsive').each(function(i) {
-			 	var item = $('<div class="item"></div>');
-			   var itemDiv = $(this).parent('a');
-			   var title = $(this).parent('a').attr("title");
-			   item.attr("title",title);
-			 	$(itemDiv.html()).appendTo(item);
-			 	item.appendTo('#modalCarousel .carousel-inner'); 
-			   if (i==0) item.addClass('active');
-			});
-			
-			$('#modalCarousel').carousel({interval:false});
-			$('#modalCarousel').on('slid.bs.carousel', function () {
-			$('.modal-title').html($(this).find('.active').attr("title"));
-			});
-			$('.panel-thumbnail>a').click(function(e){
-			   e.preventDefault();
-			   var idx = $(this).parents('.panel').parent().index();
-			 	var id = parseInt(idx);
-			 	$('#myModal').modal('show');
-			   $('#modalCarousel').carousel(id);
-			 	return false;
-			});
-			// ...Модалния carousel на галерията
-			});
-			
-			// махни по-долния ред, ако не искаш слайдовете да се сменят автоматично
-			$('.carousel').carousel();
-			
-		</script>
-	</body>
+<!-- not cool, but otherwise weird gibberish gets appended to the beginning of the email -->
+<script>
+function sendEmail() {
+    const message = document.getElementById('emailMessage').value;
+    const email = "unitedintime@gmail.com";
+    const subject = encodeURIComponent("Заявление за членство - СВ");
+    const body = encodeURIComponent(message);
+
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+}
+</script>
+
+</body>
 </html>
-

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="bg" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Локации | Сплотени във времето</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.2/dist/full.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gold': '#d4af37',
+                        'dark-bg': '#0a0a0a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        
+        /* Ефектът за картите от главната страница */
+        .map-wrapper {
+            position: relative;
+            filter: grayscale(100%) contrast(1.1) brightness(0.7);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .map-wrapper:hover {
+            filter: grayscale(0%) contrast(1) brightness(1);
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
+        }
+        /* Градиентът, който плавно свързва текста с картата */
+        .map-overlay {
+            background: linear-gradient(to bottom, #0a0a0a 0%, transparent 10%, transparent 90%, #0a0a0a 100%);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+<nav class="p-6 border-b border-white/5 bg-black/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="index.html" class="text-gold hover:text-white transition-colors uppercase tracking-[0.2em] text-[10px] font-bold">
+            <i class="fas fa-arrow-left mr-2"></i> Към началото
+        </a>
+        <span class="text-white font-bold tracking-tighter uppercase text-sm">СВ | Локации</span>
+    </div>
+</nav>
+
+<section class="py-24">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mb-24">
+            <h2 class="text-sm font-bold text-gold uppercase tracking-[0.4em] mb-4">Локации</h2>
+            <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight">Къде провеждаме сбирките</h1>
+        </div>
+
+        <div class="space-y-32">
+            
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2">
+                    <div class="w-12 h-1 bg-gold mb-8"></div>
+                    <h2 class="text-4xl font-bold text-white mb-6 tracking-tight">Стара Загора</h2>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed max-w-md">
+                        Нашето основно огнище. Мястото, където идеите ни се превръщат в действия всяка седмица.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-6">
+                            <i class="fas fa-calendar-day text-gold text-xl w-6"></i>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-500 font-bold">Ден</p>
+                                <p class="text-white">Всеки петък</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <i class="fas fa-clock text-gold text-xl w-6"></i>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-500 font-bold">Час</p>
+                                <p class="text-white">19:30 ч.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6">
+                            <i class="fas fa-location-dot text-gold text-xl w-6 mt-1"></i>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-500 font-bold">Място</p>
+                                <p class="text-white font-medium">НЧ „Св. Климент Охридски“</p>
+                                <p class="text-gray-500 text-sm italic">бул. „Цар Симеон Велики“ 156</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 w-full h-[500px] map-wrapper relative">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.3414467006883!2d25.641697276587625!3d42.420448931185565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a869751c4a6901%3A0x6d1452f1d0924437!2z0J3Rh9C60L7Qu9C-INC_0L7Qu9C40YLRgdC60LgsINCx0YPQuy4g4ptmFwdWwg0KHQuNC80LXQvtC9INCS0LXQu9C40LrQuOKAnSBCbHZkIDE1NiwgNjAwMSDQodGC0LDRgNCwINCX0LDQs9C-0YDQsA!5e0!3m2!1sbg!2sbg!4v1710000000000" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="relative z-0">
+                    </iframe>
+                    <div class="absolute inset-0 map-overlay"></div>
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row-reverse gap-16 items-center">
+                <div class="lg:w-1/2">
+                    <div class="w-12 h-1 bg-gold mb-8 lg:ml-auto"></div>
+                    <div class="lg:text-right">
+                        <h2 class="text-4xl font-bold text-white mb-6 tracking-tight">София</h2>
+                        <p class="text-gray-400 text-lg mb-8 leading-relaxed ml-auto max-w-md">
+                            Градът на възможностите, нашият столичен клон.
+                        </p>
+                        <div class="space-y-6 inline-block text-left">
+                            <div class="flex items-center gap-6">
+                                <i class="fas fa-calendar-check text-gold text-xl w-6"></i>
+                                <div>
+                                    <p class="text-xs uppercase tracking-widest text-gray-500 font-bold">Честота</p>
+                                    <p class="text-white">По уговорка / Ежемесечно</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-6">
+                                <i class="fas fa-map-marker-alt text-gold text-xl w-6 mt-1"></i>
+                                <div>
+                                    <p class="text-xs uppercase tracking-widest text-gray-500 font-bold">Локация</p>
+                                    <p class="text-white font-medium italic">Очаквайте скоро информация</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 w-full h-[500px] map-wrapper relative">
+                    <div class="absolute inset-0 flex items-center justify-center bg-zinc-900/50">
+                        <p class="text-gold uppercase tracking-[0.5em] text-xs font-bold opacity-50">Sofia Location Under Review</p>
+                    </div>
+                    <iframe 
+                        src="ТУК_ПОСТАВИ_LINK_ЗА_СОФИЯ" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="relative z-0">
+                    </iframe>
+                    <div class="absolute inset-0 map-overlay"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-40 p-16 bg-gradient-to-br from-zinc-900 to-black border border-gold/20 text-center relative overflow-hidden group">
+            <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                <i class="fas fa-lion text-9xl text-gold"></i>
+            </div>
+            <h3 class="text-3xl font-bold text-white mb-6 uppercase tracking-tight">Разшири нашата мрежа</h3>
+            <p class="text-gray-400 max-w-2xl mx-auto mb-10 text-lg">
+                Ако в твоя град няма представителство на **Сплотени във времето**, но имаш желанието да водиш – свържи се с нас.
+            </p>
+            <a href="index.html#join" class="btn bg-gold border-gold text-black hover:bg-white hover:border-white px-12 btn-lg rounded-none uppercase tracking-widest text-xs font-bold transition-all">
+                Участвай
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="py-20 bg-black text-center border-t border-white/5">
+    <p class="text-[10px] tracking-[0.4em] text-gray-600 uppercase">
+        © 2025 Сплотени във времето. Верни на миналото, силни в бъдещето.
+    </p>
+</footer>
+
+</body>
+</html>
